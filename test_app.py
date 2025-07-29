@@ -4,4 +4,4 @@ def test_index():
     tester = app.test_client()
     response = tester.get('/')
     assert response.status_code == 200
-    assert response.data == b"Hello, CI/CD!"
+    assert response.data == b"Hello,from CI!"
