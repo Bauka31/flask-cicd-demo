@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+</head>
+<body>
+    <h1>Свяжитесь с нами</h1>
+
+    {% if submitted %}
+        <p><strong>Спасибо за ваше сообщение, {{ name }}!</strong></p>
+        <p>Мы получили: "{{ message }}"</p>
+    {% else %}
+        <form method="POST">
+            <label>Имя:<br>
+                <input type="text" name="name" required>
+            </label><br><br>
+
+            <label>Сообщение:<br>
+                <textarea name="message" required></textarea>
+            </label><br><br>
+
+            <button type="submit">Отправить</button>
+        </form>
+    {% endif %}
+
+    <p><a href="/">Вернуться на главную</a></p>
+</body>
+</html>

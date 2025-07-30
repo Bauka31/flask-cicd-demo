@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Flask App{% endblock %}</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Главная</a> |
+      <a href="/about">О нас</a>
+    </nav>
+  </header>
+
+  <hr>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2025 Flask CI/CD Demo</p>
+  </footer>
+</body>
+</html>
